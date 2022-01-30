@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.png') }}" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/homestyle.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/loginstyle.css') }}">
+        {% block head %}{% endblock %}
+    </head>
+    <div>
+        <body>
+            <div class="d-flex" id="wrapper">
+                <!-- Sidebar-->
+                <div class="border-end bg-white" id="sidebar-wrapper">
+                    <div class="sidebar-heading border-bottom bg-light">Welcome</div>
+                    <div class="list-group list-group-flush">
+                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{ url_for('home') }}">Home</a>
+                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{ url_for('predict') }}">Predict</a>
+                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{ url_for('train') }}">Train</a>
+                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{{ url_for('feedback') }}">Feedback</a>
+                    </div>
+                </div>
+                    
+                <!-- Page content wrapper-->
+                <div id="page-content-wrapper">
+                    <!-- Top navigation-->
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                        <div class="container-fluid">
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{user}}</a>
+                                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="{{ url_for('profile') }}">Profile</a>
+                                            <a class="dropdown-item" href="{{ url_for('activity') }}">Activity</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item">Logout</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </nav>
+                        
+                    <!-- Page content-->
+                    
+                    <div class="container-fluid" onload="getResult('{{result}}')">
+                        {% block body %}{% endblock %}
+                    </div>
+                </div>
+            </div> 
+        </body>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="{{ url_for('static', filename='js/validate.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/results.js') }}"></script>
+</html>

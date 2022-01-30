@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Predict</title>
+{% endblock %}
+
+{% block body %}
+<form class="home-prediction" method="post">
+	<div class="container-fluid">
+    	<h1 class="mt-4">Classification</h1>
+		<div id="selectOption">
+			<label for="dropdown-select">Select an Option to Continue: </label>
+			<select id="dropdown-select">
+				<option selected>Select</option>
+				<option value="proteins">Form Input</option>
+				<option value="batchFiles">File Input</option>
+			</select>
+		</div>
+		<div id="proteins" style="display: none;">
+			<input type="number" name=" DYRK1A_N " id="DYRK1A_N" placeholder=" DYRK1A_N " step="any">
+			<input type="number" name=" ITSN1_N " id="ITSN1_N" placeholder=" ITSN1_N " step="any">
+			<input type="number" name=" BDNF_N " id="BDNF_N" placeholder=" BDNF_N " step="any">
+			<input type="number" name=" NR1_N " id="NR1_N" placeholder=" NR1_N " step="any">
+			<input type="number" name=" NR2A_N " id="NR2A_N" placeholder=" NR2A_N " step="any">
+			<input type="number" name=" pAKT_N " id="pAKT_N" placeholder=" pAKT_N " step="any">
+			<input type="number" name=" pBRAF_N " id="pBRAF_N" placeholder=" pBRAF_N " step="any">
+			<input type="number" name=" pCAMKII_N " id="pCAMKII_N" placeholder=" pCAMKII_N " step="any">
+			<input type="number" name=" pCREB_N " id="pCREB_N" placeholder=" pCREB_N " step="any">
+			<input type="number" name=" pELK_N " id="pELK_N" placeholder=" pELK_N " step="any">
+			<input type="number" name=" pERK_N " id="pERK_N" placeholder=" pERK_N " step="any">
+			<input type="number" name=" pJNK_N " id="pJNK_N" placeholder=" pJNK_N " step="any">
+			<input type="number" name=" PKCA_N " id="PKCA_N" placeholder=" PKCA_N " step="any">
+			<input type="number" name=" pMEK_N " id="pMEK_N" placeholder=" pMEK_N " step="any">
+			<input type="number" name=" pNR1_N " id="pNR1_N" placeholder=" pNR1_N " step="any">
+			<input type="number" name=" pNR2A_N " id="pNR2A_N" placeholder=" pNR2A_N " step="any">
+			<input type="number" name=" pNR2B_N " id="pNR2B_N" placeholder=" pNR2B_N " step="any">
+			<input type="number" name=" pPKCAB_N " id="pPKCAB_N" placeholder=" pPKCAB_N " step="any">
+			<input type="number" name=" pRSK_N " id="pRSK_N" placeholder=" pRSK_N " step="any">
+			<input type="number" name=" AKT_N " id="AKT_N" placeholder=" AKT_N " step="any">
+			<input type="number" name=" BRAF_N " id="BRAF_N" placeholder=" BRAF_N " step="any">
+			<input type="number" name=" CAMKII_N " id="CAMKII_N" placeholder=" CAMKII_N " step="any">
+			<input type="number" name=" CREB_N " id="CREB_N" placeholder=" CREB_N " step="any">
+			<input type="number" name=" ELK_N " id="ELK_N" placeholder=" ELK_N " step="any">
+			<input type="number" name=" ERK_N " id="ERK_N" placeholder=" ERK_N " step="any">
+			<input type="number" name=" GSK3B_N " id="GSK3B_N" placeholder=" GSK3B_N " step="any">
+			<input type="number" name=" JNK_N " id="JNK_N" placeholder=" JNK_N " step="any">
+			<input type="number" name=" MEK_N " id="MEK_N" placeholder=" MEK_N " step="any">
+			<input type="number" name=" TRKA_N " id="TRKA_N" placeholder=" TRKA_N " step="any">
+			<input type="number" name=" RSK_N " id="RSK_N" placeholder=" RSK_N " step="any">
+			<input type="number" name=" APP_N " id="APP_N" placeholder=" APP_N " step="any">
+			<input type="number" name=" Bcatenin_N " id="Bcatenin_N" placeholder=" Bcatenin_N " step="any">
+			<input type="number" name=" SOD1_N " id="SOD1_N" placeholder=" SOD1_N " step="any">
+			<input type="number" name=" MTOR_N " id="MTOR_N" placeholder=" MTOR_N " step="any">
+			<input type="number" name=" P38_N " id="P38_N" placeholder=" P38_N " step="any">
+			<input type="number" name=" pMTOR_N " id="pMTOR_N" placeholder=" pMTOR_N " step="any">
+			<input type="number" name=" DSCR1_N " id="DSCR1_N" placeholder=" DSCR1_N " step="any">
+			<input type="number" name=" AMPKA_N " id="AMPKA_N" placeholder=" AMPKA_N " step="any">
+			<input type="number" name=" NR2B_N " id="NR2B_N" placeholder=" NR2B_N " step="any">
+			<input type="number" name=" pNUMB_N " id="pNUMB_N" placeholder=" pNUMB_N " step="any">
+			<input type="number" name=" RAPTOR_N " id="RAPTOR_N" placeholder=" RAPTOR_N " step="any">
+			<input type="number" name=" TIAM1_N " id="TIAM1_N" placeholder=" TIAM1_N " step="any">
+		    <input type="number" name=" pP70S6_N " id="pP70S6_N" placeholder=" pP70S6_N " step="any">
+			<input type="number" name=" NUMB_N " id="NUMB_N" placeholder=" NUMB_N " step="any">
+			<input type="number" name=" P70S6_N " id="P70S6_N" placeholder=" P70S6_N " step="any">
+			<input type="number" name=" pGSK3B_N " id="pGSK3B_N" placeholder=" pGSK3B_N " step="any">
+			<input type="number" name=" pPKCG_N " id="pPKCG_N" placeholder=" pPKCG_N " step="any">
+			<input type="number" name=" CDK5_N " id="CDK5_N" placeholder=" CDK5_N " step="any">
+			<input type="number" name=" S6_N " id="S6_N" placeholder=" S6_N " step="any">
+			<input type="number" name=" ADARB1_N " id="ADARB1_N" placeholder=" ADARB1_N " step="any">
+			<input type="number" name=" AcetylH3K9_N " id="AcetylH3K9_N" placeholder=" AcetylH3K9_N " step="any">
+			<input type="number" name=" RRP1_N " id="RRP1_N" placeholder=" RRP1_N " step="any">
+			<input type="number" name=" BAX_N " id="BAX_N" placeholder=" BAX_N " step="any">
+			<input type="number" name=" ARC_N " id="ARC_N" placeholder=" ARC_N " step="any">
+			<input type="number" name=" ERBB4_N " id="ERBB4_N" placeholder=" ERBB4_N " step="any">
+			<input type="number" name=" nNOS_N " id="nNOS_N" placeholder=" nNOS_N " step="any">
+			<input type="number" name=" Tau_N " id="Tau_N" placeholder=" Tau_N " step="any">
+			<input type="number" name=" GFAP_N " id="GFAP_N" placeholder=" GFAP_N " step="any">
+			<input type="number" name=" GluR3_N " id="GluR3_N" placeholder=" GluR3_N " step="any">
+			<input type="number" name=" GluR4_N " id="GluR4_N" placeholder=" GluR4_N " step="any">
+			<input type="number" name=" IL1B_N " id="IL1B_N" placeholder=" IL1B_N " step="any">
+			<input type="number" name=" P3525_N " id="P3525_N" placeholder=" P3525_N " step="any">
+			<input type="number" name=" pCASP9_N " id="pCASP9_N" placeholder=" pCASP9_N " step="any">
+			<input type="number" name=" PSD95_N " id="PSD95_N" placeholder=" PSD95_N " step="any">
+			<input type="number" name=" SNCA_N " id="SNCA_N" placeholder=" SNCA_N " step="any">
+			<input type="number" name=" Ubiquitin_N " id="Ubiquitin_N" placeholder=" Ubiquitin_N " step="any">
+			<input type="number" name=" pGSK3B_Tyr216_N " id="pGSK3B_Tyr216_N" placeholder=" pGSK3B_Tyr216_N " step="any">
+			<input type="number" name=" SHH_N " id="SHH_N" placeholder=" SHH_N " step="any">
+			<input type="number" name=" BAD_N " id="BAD_N" placeholder=" BAD_N " step="any">
+			<input type="number" name=" BCL2_N " id="BCL2_N" placeholder=" BCL2_N " step="any">
+			<input type="number" name=" pS6_N " id="pS6_N" placeholder=" pS6_N " step="any">
+			<input type="number" name=" pCFOS_N " id="pCFOS_N" placeholder=" pCFOS_N " step="any">
+			<input type="number" name=" SYP_N " id="SYP_N" placeholder=" SYP_N " step="any">
+			<input type="number" name=" H3AcK18_N " id="H3AcK18_N" placeholder=" H3AcK18_N " step="any">
+			<input type="number" name=" EGR1_N " id="EGR1_N" placeholder=" EGR1_N " step="any">
+			<input type="number" name=" H3MeK4_N " id="H3MeK4_N" placeholder=" H3MeK4_N " step="any">
+			<input type="number" name=" CaNA_N " id="CaNA_N" placeholder=" CaNA_N " step="any">
+		</div>
+		<div id="batchFiles" align="center" style = "display:none">
+			<label for="myfile">Select a file:</label>
+			<input type="file" id="myfile" name="myfile">
+		</div>
+		<div id="submitBtn" align="center">
+			<input type="submit" value="Classify" class="button" style="background-color: green;" onclick="requiredCheck()">
+			<input type="submit" value="Clear" class="button" style="background-color: red;" onclick="clear()">
+		</div>
+	</div>
+</form>
+{% endblock %}

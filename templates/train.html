@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Train</title>
+{% endblock %}
+
+{% block body %}
+<h1 class="mt-4">Retrain the Model</h1>
+<p>Upload the files for retraining the model...</p>
+<p>
+    <input type="file" id="trainfile" name="trainfile">
+    <input type="submit" value="Train" class="button" style="background-color: green;" onclick="">
+</p>
+{% endblock %}

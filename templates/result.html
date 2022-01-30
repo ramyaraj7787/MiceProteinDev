@@ -1,0 +1,36 @@
+% extends 'base.html' %}
+
+{% block head %}
+<title>Result</title>
+{% endblock %}
+
+{% block body %}
+<h1 class="mt-4">Result</h1>
+<form id="formID" method="POST" action="/home">
+	<div align="center">
+		<table style="width:50%">
+			<tbody>
+				<tr>
+					<td>Genotype </td>
+					<td>{{genotype}}</td>
+				</tr>
+				<tr>
+					<td>Behavior</td>
+					<td>{{behavior}}</td>
+				</tr>
+				<tr>
+					<td>Treatment</td>
+					<td>{{treatment}}</td>
+				</tr>
+				<tr>
+					<td>Mice Class</td>
+					<td>{{mice_class}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div align="right">
+		<input type="submit" value="Back" class="button">
+	</div>
+</form>
+{% endblock %}
