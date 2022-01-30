@@ -42,7 +42,7 @@ def activity():
     return render_template('activity.html')
 
 @app.route('/result', methods=['GET', 'POST'])  # To render Activity
-def activity():
+def result():
     output = getResult(0)
     return render_template('result.html', genotype=output[0], behavior=output[1], treatment=output[2], mice_class=output[3] )
 
